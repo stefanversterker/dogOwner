@@ -20,15 +20,27 @@ De hond heet: [NAAM-Dog]
 
 Instantieer hieronder de objecten en laat zien dat je code werkt.
  */
-void main() {
+void main(String[] args) {
 
+//Objecten of instances gemaakt met de Dog constructor
     Dog dog = new Dog("Barra", "vuilnisbak", 12, "teef");
+    Dog skye = new Dog("Skye", "Collie", 14, "teef");
+    Dog zoe = new Dog("Zoe", "Collie", 12, "teef");
+    Dog kiwi = new Dog("Kiwi", "Collie", 4, "teef");
+    Dog skip = new Dog("Skip", "Collie", 4, "reu");
 
+    //Objecten of instances gemaakt met de dogOwner constructor
     DogOwner nick = new DogOwner("Nick", "male");
-    nick.setDog(dog);
+    DogOwner cees = new DogOwner("Cees", "male");
+    DogOwner karin = new DogOwner("Karin", "female");
 
-    IO.println(nick.toString());
+    //Honden toegewezen aan dogOwners met de setDog method.
+    nick.setDog(dog);
+    cees.setDog(skye);
+    cees.incAge();
+
+    //Blijkbaar herkent Java vanzelf dat 'cees' een dogOwner is?
+    IO.println(cees.toString());
+
 
 }
-
-
